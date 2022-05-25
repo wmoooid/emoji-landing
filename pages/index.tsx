@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <meta charSet='UTF-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=false' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no' />
         <title>emoji</title>
         <link href='https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap' rel='stylesheet' />
       </Head>

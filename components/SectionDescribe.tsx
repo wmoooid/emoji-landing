@@ -2,6 +2,7 @@ import React from 'react';
 
 export const SectionDescribe: React.FC = () => {
   const [value, setValue] = React.useState('3');
+  const [showPopup, setShowPopup] = React.useState(true);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -15,7 +16,7 @@ export const SectionDescribe: React.FC = () => {
         </h2>
         <p className='body body-section'>Find emoji for every mood you need.</p>
         <div className={`section-describe__wrapper wrapper value-${value}`}>
-          <div className='section-describe__picker'>
+          <div onClick={() => setShowPopup(false)} className='section-describe__picker'>
             <div
               style={{ transform: `translateX(${-300 * Number(value)}px)` }}
               className='section-describe__picker-image-container'>
@@ -26,6 +27,14 @@ export const SectionDescribe: React.FC = () => {
               <img src='section-describe__picker-image-5.png' alt='' className='section-describe__picker-image' />
             </div>
             <div className='section-describe__picker-wrapper'>
+              {showPopup && (
+                <div className='popup__container'>
+                  <small className='popup__text'>Drag me!</small>
+                  <svg width='48' height='16' viewBox='0 0 48 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M38.5 16L29 0L48 1.61515e-06L38.5 16Z' fill='var(--red)' />
+                  </svg>
+                </div>
+              )}
               <input
                 value={value}
                 onChange={(e) => handleChange(e)}

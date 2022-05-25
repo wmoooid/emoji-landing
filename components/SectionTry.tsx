@@ -30,6 +30,8 @@ export const SectionTry: React.FC = () => {
     { layout: 'right', fl: '85%', sl: '25%', emoji: 2, color: 1 },
   ]);
 
+  const [showPopup, setShowPopup] = React.useState(true);
+
   function handleClick(event: any) {
     setList([...list, { layout: genLayout(), fl: genLength(), sl: genLength(), emoji: event.target.id, color: genColor() }]);
   }
@@ -65,7 +67,15 @@ export const SectionTry: React.FC = () => {
               ))}
             </div>
           </div>
-          <ul className='section-try__emoji-list'>
+          <ul onClick={() => setShowPopup(false)} className='section-try__emoji-list'>
+            {showPopup && (
+              <div className='popup__container'>
+                <small className='popup__text'>Click me!</small>
+                <svg width='48' height='16' viewBox='0 0 48 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M38.5 16L29 0L48 1.61515e-06L38.5 16Z' fill='var(--red)' />
+                </svg>
+              </div>
+            )}
             {emojiList.map((item, index) => (
               <li id={`${index + 1}`} key={item} className='section-try__emoji-item' onClick={(event) => handleClick(event)}>
                 <img className='section-try__emoji-item-image' src={item} alt='' />
