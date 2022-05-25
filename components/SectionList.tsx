@@ -10,7 +10,7 @@ export const SectionList: React.FC = () => {
         {Array(100)
           .fill(1)
           .map((el, i) => (
-            <img src={`section-list/image${i}.png`} alt='' />
+            <img key={i} src={`section-list/image${i}.png`} alt='' />
           ))}
       </div>
     </section>
