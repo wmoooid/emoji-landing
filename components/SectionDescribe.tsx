@@ -8,6 +8,10 @@ export const SectionDescribe: React.FC = () => {
     setValue(e.target.value);
   };
 
+  function handlePopup() {
+    if (showPopup) setShowPopup(false);
+  }
+
   return (
     <section className='section'>
       <div className='container'>
@@ -16,7 +20,7 @@ export const SectionDescribe: React.FC = () => {
         </h2>
         <p className='body body-section'>Find emoji for every mood you need.</p>
         <div className={`section-describe__wrapper wrapper value-${value}`}>
-          <div onClick={() => setShowPopup(false)} className='section-describe__picker'>
+          <div onMouseDown={handlePopup} onTouchStart={handlePopup} className='section-describe__picker'>
             <div
               style={{ transform: `translateX(${-300 * Number(value)}px)` }}
               className='section-describe__picker-image-container'>
