@@ -1,0 +1,35 @@
+:root {
+  --background: #fff;
+  --main: #000;
+  --blue: #798df2;
+  --green: #77d987;
+  --red: #eb5763;
+  --purple: #936dfc;
+  --yellow: #ffd34d;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  letter-spacing: -0.04em;
+
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
