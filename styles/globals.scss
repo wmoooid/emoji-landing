@@ -18,6 +18,10 @@ body {
   background-color: var(--background);
 }
 
+main {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
   color: var(--main);

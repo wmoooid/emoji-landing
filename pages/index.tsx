@@ -6,6 +6,7 @@ import SectionExpress from '../components/SectionExpress';
 import SectionHero from '../components/SectionHero';
 import SectionList from '../components/SectionList';
 import SectionMore from '../components/SectionMore';
+import SectionTry from '../components/SectionTry';
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <SectionEngage />
         <SectionDescribe />
         <SectionMore />
+        <SectionTry />
       </main>
     </>
   );

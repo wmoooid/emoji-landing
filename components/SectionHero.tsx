@@ -41,7 +41,7 @@ export const SectionHero: React.FC = () => {
       <div className='section-hero__content'>
         <div className='container section-hero__container'>
           <span className='section-hero__logo-text'>emoji</span>
-          <span className='section-hero__button'>Try now</span>
+          {/* <span className='section-hero__button'>Try now</span> */}
         </div>
         <div className='section-hero__layout'>
           <svg
