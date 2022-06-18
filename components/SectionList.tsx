@@ -2,7 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export const SectionList: React.FC = () => {
-  const [ref, inView, entry] = useInView();
+  // const [ref, inView, entry] = useInView();
 
   return (
     <section className='section'>
